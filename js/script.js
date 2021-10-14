@@ -135,7 +135,6 @@ function sliderNextFn(arrSlide, arrSlide2) {
       hashtagsUser: [],
       hashtagsDate: [],
     }
-    totalAudienceCalculation(curSlide+1);
     groupNum++;
   }
   maxSlide = arrSlide.children.length - 1;
@@ -150,6 +149,7 @@ function sliderNextFn(arrSlide, arrSlide2) {
         curSlide++;
     };
   }
+  totalAudienceCalculation(curSlide);
   addToTableBtnGroup.innerHTML = `${hashtagsArray[curSlide].group}`
   goToslide(arrSlide.children, curSlide);
   goToslide(arrSlide2.children, curSlide);
@@ -162,6 +162,7 @@ function sliderPrevFn(arrSlide, arrSlide2) {
       curSlide--;
   };
   addToTableBtnGroup.innerHTML = `${hashtagsArray[curSlide].group}`
+  totalAudienceCalculation(curSlide);
   goToslide(arrSlide.children, curSlide);
   goToslide(arrSlide2.children, curSlide);
 }
@@ -226,15 +227,17 @@ form.addEventListener('submit', (e)=>{
 
 function validate(evt) {
   let theEvent = evt || window.event;
+  let key;
 
   if (theEvent.type === 'paste') {
       key = event.clipboardData.getData('text/plain');
   } else {
-      let key = theEvent.keyCode || theEvent.which;
+      key = theEvent.keyCode || theEvent.which;
       key = String.fromCharCode(key);
   }
   let regex = /[0-9]|\./;
   if( !regex.test(key) ) {
+    alert('You can only add number in \'Audience\'')
     theEvent.returnValue = false;
     if(theEvent.preventDefault) theEvent.preventDefault();
   }
@@ -246,7 +249,7 @@ let tableData = [
     savedOn : `10/12/2021, 4:05 PM`,
     savedBy : 'User1',
     totalAudience : '3.00M',
-    totalAudienceNumber : 30000000,
+    totalAudienceNumber : 3000000,
     successRate : 'N/A'
   }
 ];
@@ -274,19 +277,19 @@ addToTableBtn.addEventListener('click', ()=>{
 
 // Copy to clipboard
 copyHashTags.addEventListener('click', ()=>{
-  let hashtagsFormat = hashtagsArray[curSlide].hashtags.join(',');
+  let hashtagsFormat = hashtagsArray[curSlide].hashtags.join(' ');
   navigator.clipboard.writeText(hashtagsFormat);
   alert("Hashtags Copied!")
 })
 
 // Success rate message tooltip
-document.querySelector('#stooltiptrigger').addEventListener('click', ()=>{
-  let tooltip = document.querySelector('#stooltip')
-  if(tooltip.style.display === 'block'){
-    tooltip.style.display = 'none'
-  }else{
-    tooltip.style.display = 'block'
-  }
+const sTooltipTrigger = document.querySelector('#stooltiptrigger');
+const tooltip = document.querySelector('#stooltip');
+sTooltipTrigger.addEventListener('mouseover', ()=>{
+    tooltip.style.display = 'block';
+});
+sTooltipTrigger.addEventListener('mouseout', ()=>{
+    tooltip.style.display = 'none';
 })
 
 // Table Sorting
