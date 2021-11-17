@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -64,6 +65,48 @@ button:active {
 .header .header_left .short_menu_trigger {
   display: none;
 }
+.header .header_left .h_l_inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .header_left .h_l_inner .searchBox_container {
+  padding: 0rem 3rem;
+  flex-shrink: 0;
+}
+.header .header_left .h_l_inner .searchBox_container .form form {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+}
+.header .header_left .h_l_inner .searchBox_container .form form button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: black;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.header .header_left .h_l_inner .searchBox_container .form form input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-right: 1rem;
+}
+.header .header_left .h_l_inner .welcome_message_container {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.header .header_left .h_l_inner .welcome_message_container h1 {
+  font-family: "Courier Prime", monospace;
+}
 .header .short_menu_triggers {
   margin-left: auto;
   flex-shrink: 0;
@@ -91,6 +134,10 @@ button:active {
 }
 .header .short_menu_trigger:last-child {
   margin-right: 0rem;
+}
+
+.header_welcome_responsive {
+  display: none;
 }
 
 .floating_action_buttons {
@@ -337,9 +384,22 @@ button:active {
   font-size: 10px;
   border-radius: 50%;
 }
+.sidebar .sider_bar_footer .adding_username_container .usernames .username .user_image {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  background-color: #c5c5c5;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sidebar .sider_bar_footer .adding_username_container .usernames .username .user_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .sidebar .sider_bar_footer .adding_username_container .usernames .username .user_name {
   padding: 0.5rem 1rem;
-  background-color: #c5c5c5;
+  background-color: #cbdfeb;
   font-size: 12px;
   font-weight: 700;
   border-radius: 50px;
@@ -379,7 +439,7 @@ button:active {
 
 .body {
   width: calc(100% - 300px);
-  margin: 60px 0px 60px auto;
+  margin: 60px 0px 80px auto;
   min-height: 100vh;
   background-color: white;
   transition: all 0.3s linear;
@@ -825,15 +885,113 @@ button:active {
     margin-bottom: 1rem;
   }
 }
+@media screen and (max-width: 1192px) {
+  .header {
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .header_left .h_l_inner {
+    flex-direction: column;
+  }
+  .header .header_left .h_l_inner .searchBox_container {
+    height: 40px;
+    padding: 0rem 2rem;
+    flex-shrink: 0;
+    order: 1;
+  }
+  .header .header_left .h_l_inner .welcome_message_container {
+    height: 60px;
+    line-height: 60px;
+  }
+  .header .short_menu_triggers {
+    margin-left: initial;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  .body {
+    margin: 160px 0px 80px auto;
+  }
+}
 @media screen and (max-width: 992px) {
+  .header .header_left .h_l_inner {
+    display: none;
+  }
+  .header .short_menu_triggers {
+    margin-left: auto;
+  }
+
+  .header_welcome_responsive {
+    display: block;
+    width: 100%;
+    margin-top: 60px;
+    padding: 1rem;
+    background-color: #0269d5;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .header_welcome_responsive .searchBox_container,
+.header_welcome_responsive .welcome_message_container {
+    width: 100%;
+  }
+  .header_welcome_responsive .searchBox_container {
+    margin-bottom: 1rem;
+  }
+  .header_welcome_responsive .searchBox_container .form form {
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+  }
+  .header_welcome_responsive .searchBox_container .form form button {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+  .header_welcome_responsive .searchBox_container .form form input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding-right: 1rem;
+  }
+  .header_welcome_responsive .welcome_message_container {
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  .header_welcome_responsive .welcome_message_container h1 {
+    font-family: "Courier Prime", monospace;
+  }
+
+  .body {
+    margin-top: 0rem;
+  }
+
   .sidebar {
     z-index: 1000;
     height: auto;
   }
+  .sidebar .bar_logo {
+    background-color: #0269d5;
+  }
   .sidebar .bar_logo .menu_bar span {
+    background-color: #cbdfeb;
     transition: none;
   }
+  .sidebar .bar_logo .logo a {
+    color: #cbdfeb;
+  }
   .sidebar .mobile_menu_wrapper {
+    min-width: 300px;
     height: calc(100vh - 120px);
     position: fixed;
     top: 60px;
@@ -927,23 +1085,40 @@ button:active {
 .wave.wave2 {
   animation: moveWave2 15s linear infinite;
   z-index: 99;
-  bottom: 10px;
+  bottom: -10px;
   animation-delay: -5s;
   opacity: 0.5;
 }
 .wave.wave3 {
   animation: moveWave 15s linear infinite;
   z-index: 98;
-  bottom: 15px;
+  bottom: -15px;
   animation-delay: -2s;
   opacity: 0.2;
 }
 .wave.wave4 {
   animation: moveWave2 5s linear infinite;
   z-index: 97;
-  bottom: 20px;
+  bottom: -20px;
   animation-delay: -5s;
   opacity: 0.7;
+}
+
+.upperWave .wave.wave1,
+.lowerWave .wave.wave1 {
+  bottom: 0;
+}
+.upperWave .wave.wave2,
+.lowerWave .wave.wave2 {
+  bottom: 10px;
+}
+.upperWave .wave.wave3,
+.lowerWave .wave.wave3 {
+  bottom: 15px;
+}
+.upperWave .wave.wave4,
+.lowerWave .wave.wave4 {
+  bottom: 20px;
 }
 
 @keyframes moveWave {

@@ -102,6 +102,23 @@
     <!-- Header part start -->
     <!----------------------->
     <section class="header">
+      <div class="header_left">
+        <div class="h_l_inner">
+          <div class="searchBox_container">
+            <div class="form">
+              <form action="#">
+                <button type="submit"><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="Search here" />
+              </form>
+            </div>
+          </div>
+          <div class="welcome_message_container">
+            <div class="w_m_inner">
+              <h1>Good Morning!Name</h1>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="short_menu_triggers">
         <button class="short_menu_trigger"><i class="fas fa-bell"></i></button>
         <button class="short_menu_trigger"><i class="fas fa-user"></i></button>
@@ -110,6 +127,7 @@
     <!--------------------->
     <!-- Header part end -->
     <!--------------------->
+
     <!-------------------------->
     <!-- Action buttons start -->
     <!-------------------------->
@@ -121,6 +139,7 @@
     <!------------------------>
     <!-- Action buttons end -->
     <!------------------------>
+
     <!------------------->
     <!-- Sidebar start -->
     <!------------------->
@@ -136,7 +155,6 @@
             <h1>Logo</h1>
           </a>
         </div>
-        <div class="hash"><h1>#</h1></div>
       </div>
       <div class="mobile_menu_wrapper">
         <div class="title">
@@ -157,7 +175,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="active">
                 <div class="icon"><i class="fas fa-hashtag"></i></div>
                 <div class="label">Hashtags</div>
               </a>
@@ -178,28 +196,26 @@
             <div class="usernames">
               <!--User name Start-->
               <div class="username">
-                <div class="user_img">
-                  <span>1</span> <i class="fas fa-user"></i>
+                <div class="user_image">
+                  <img
+                    src="https://images.unsplash.com/photo-1485178575877-1a13bf489dfe?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YW5pbWUlMjBwb3J0cmFpdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  />
                 </div>
                 <div class="user_name"><p>USERNAME 1</p></div>
                 <div class="edit_btn">
                   <button><i class="fas fa-pen"></i></button>
                 </div>
-                <div class="close_btn">
-                  <button><i class="fas fa-times"></i></button>
-                </div>
               </div>
               <!--User name End-->
               <div class="username">
-                <div class="user_img">
-                  <span>1</span> <i class="fas fa-user"></i>
+                <div class="user_image">
+                  <img
+                    src="https://images.unsplash.com/photo-1514626585111-9aa86183ac98?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YW5pbWUlMjBwb3J0cmFpdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  />
                 </div>
                 <div class="user_name"><p>USERNAME 2</p></div>
                 <div class="edit_btn">
                   <button><i class="fas fa-pen"></i></button>
-                </div>
-                <div class="close_btn">
-                  <button><i class="fas fa-times"></i></button>
                 </div>
               </div>
             </div>
@@ -211,6 +227,28 @@
     <!-- Sidebar end -->
     <!----------------->
 
+    <!-------------------------------------->
+    <!-- Welcome Message Responsive start -->
+    <!-------------------------------------->
+    <section class="header_welcome_responsive">
+      <div class="searchBox_container">
+        <div class="form">
+          <form action="#">
+            <button type="submit"><i class="fas fa-search"></i></button>
+            <input type="text" placeholder="Search here" />
+          </form>
+        </div>
+      </div>
+      <div class="welcome_message_container">
+        <div class="w_m_inner">
+          <h1>Good Morning!Name</h1>
+        </div>
+      </div>
+    </section>
+    <!-------------------------------------->
+    <!-- Welcome Message Responsive start -->
+    <!-------------------------------------->
+
     <!-------------------------------->
     <!-- Content of body part start -->
     <!-------------------------------->
@@ -221,6 +259,168 @@
         <div class="wave wave3"></div>
         <div class="wave wave4"></div>
       </div>
+      <!-- Hashtags Start -->
+      <div class="hashtags">
+        <!-- Hashtags Form Start -->
+        <div class="form_container">
+          <div class="form_inner">
+            <div class="form">
+              <form action="#" class="addHashDataInView">
+                <div class="input">
+                  <label for="addNew">Add New Hashtag #</label>
+                  <input type="text" placeholder="Type" id="addNew" />
+                </div>
+                <div class="input">
+                  <div class="info">
+                    <img src="./assets/images/qm.png" />
+                    <div class="info_tooltip">
+                      <p>
+                        The number of posts that used this hashtag in the past.
+                        Can be found on Instagram when a hashtag is being
+                        searched.
+                      </p>
+                    </div>
+                  </div>
+                  <label for="audiance">Audiance</label>
+                  <input
+                    type="text"
+                    placeholder="Type"
+                    id="audiance"
+                    onkeypress="validate(event)"
+                  />
+                </div>
+                <div class="button">
+                  <button>Add</button>
+                </div>
+              </form>
+              <div class="hashtag_info">
+                <p>Total Audience: <span id="totalAudience">4.00M</span></p>
+                <button id="copyHashTags">Copy hashtags</button>
+              </div>
+            </div>
+            <div class="group">
+              <button id="sliderPrev">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="group_list">
+                <p>Group 1</p>
+              </div>
+              <button id="sliderNext">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Hashtags Form End -->
+        <!-- Hashtags Group Start -->
+        <div class="hashtag_groups_container">
+          <div class="hashtag_group">
+            <!-- Hashtag Start -->
+            <div class="hashtag">
+              <div class="wave wave1"></div>
+              <div class="wave wave2"></div>
+              <div class="wave wave3"></div>
+              <div class="wave wave4"></div>
+              <div class="menu">
+                <button><i class="fas fa-ellipsis-v"></i></button>
+              </div>
+              <div class="name">
+                <h1>#hashtag1</h1>
+              </div>
+              <div class="audiance">
+                <p>Audiance:</p>
+                <span>3,000,000</span>
+              </div>
+              <div class="date">
+                <p>Added on</p>
+                <span>10/13/2021</span>
+              </div>
+              <div class="user">
+                <p>by</p>
+                <span>User1</span>
+              </div>
+            </div>
+            <!-- Hashtag End -->
+            <!-- Hashtag Start -->
+            <div class="hashtag">
+              <div class="wave wave1"></div>
+              <div class="wave wave2"></div>
+              <div class="wave wave3"></div>
+              <div class="wave wave4"></div>
+              <div class="menu">
+                <button><i class="fas fa-ellipsis-v"></i></button>
+              </div>
+              <div class="name">
+                <h1>#hashtag2</h1>
+              </div>
+              <div class="audiance">
+                <p>Audiance:</p>
+                <span>1,000,000</span>
+              </div>
+              <div class="date">
+                <p>Added on</p>
+                <span>10/24/2021</span>
+              </div>
+              <div class="user">
+                <p>by</p>
+                <span>User2</span>
+              </div>
+            </div>
+            <!-- Hashtag End -->
+          </div>
+        </div>
+        <!-- Hashtags Group End -->
+        <!-- Hashtags Use Group Button -->
+        <div class="use_grp_btn">
+          <button class="addToTableBtn">
+            Click here to use <span id="addToTableBtnGroup">Group 1</span>
+          </button>
+        </div>
+        <!-- Hashtags Use Group Button -->
+        <!-- Hashtags Change Log Table -->
+        <div class="change_log_table_container">
+          <div class="successrate_tooltipcontainer">
+            <div class="info_tooltip" id="stooltip">
+              <p>
+                Here you can see how well your group of hashtags perform. The
+                Success Rate is calculated by the average followers gained on a
+                daily basis.
+              </p>
+            </div>
+          </div>
+          <div class="change_log_table_inner">
+            <div class="change_log_title"><p>Change log</p></div>
+            <div class="change_log_table">
+              <table class="hashtagsGroupTable">
+                <thead>
+                  <tr>
+                    <th>Hashtag Group</th>
+                    <th>Saved on</th>
+                    <th>Saved by</th>
+                    <th>Total Audience</th>
+                    <th>
+                      <div class="info" id="stooltiptrigger">
+                        <img src="./assets/images/qm.png" />
+                      </div>
+                      <p class="success" data-order="desc" data-col="audience">
+                        Success Rate
+                      </p>
+
+                      <div class="sortArrays">
+                        <i class="fas fa-sort-up"></i>
+                        <i class="fas fa-sort-down"></i>
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Hashtags Change Log Table -->
+      </div>
+      <!-- Hashtags End -->
     </section>
     <!------------------------------>
     <!-- Content of body part end -->
@@ -233,14 +433,16 @@
       <div class="right">
         <p>© All right reserved 2021</p>
       </div>
-      <div class="wave wave1"></div>
-      <div class="wave wave2"></div>
-      <div class="wave wave3"></div>
-      <div class="wave wave4"></div>
+      <div class="lowerWave">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+      </div>
     </section>
     <!--------------------->
     <!-- Footer part end -->
     <!--------------------->
-    <script src="./js/script.js"></script>
+    <script src="./js/hashtag.js"></script>
   </body>
 </html>
