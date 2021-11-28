@@ -1,35 +1,3 @@
-const menuBtn = document.querySelector(".menu_bar");
-const displayToggleArray = [
-  document.querySelector(".sidebar .title"),
-  document.querySelector(".sidebar .sider_bar_footer"),
-  document.querySelector(".sidebar .bar_logo .logo"),
-  ...document.querySelectorAll(".sidebar .navigation_menu ul li a .label"),
-];
-const widthToggleArray = [
-  document.querySelector(".header"),
-  document.querySelector(".body"),
-  document.querySelector(".footer"),
-];
-menuBtn.addEventListener("click", () => {
-  if (window.innerWidth > 992) {
-    const sidebar = document.querySelector(".sidebar");
-    sidebar.classList.toggle("expended");
-    widthToggleArray.forEach((c) => c.classList.toggle("viewPortToggle"));
-    if (sidebar.classList.contains("expended")) {
-      displayToggleArray.forEach((c) => (c.style.display = "none"));
-    } else {
-      setTimeout(() => {
-        displayToggleArray.forEach((c) => (c.style.display = "block"));
-      }, 300);
-    }
-  } else {
-    menuBtn.classList.toggle("cross_bar");
-    document
-      .querySelector(".mobile_menu_wrapper")
-      .classList.toggle("sidebarinout");
-  }
-});
-
 const profilesTriggers = document.querySelector(".profiles_triggers");
 const profileTriggersDropdown = document.getElementById("p_t_dropdown");
 if (profilesTriggers) {
@@ -76,8 +44,8 @@ const addToTableBtnGroup = document.querySelector("#addToTableBtnGroup");
 const hashtagsArray = [
   {
     group: "Group 1",
-    hashtags: ["#hashtag1", "#hashtag2"],
-    audiences: [3000000, 1000000],
+    hashtags: [""],
+    audiences: [],
     hashtagsUser: ["User1", "User2"],
     hashtagsDate: ["10/13/2021", "10/24/2021"],
     user: "User1",
