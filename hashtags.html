@@ -114,7 +114,7 @@
           </div>
           <div class="welcome_message_container">
             <div class="w_m_inner">
-              <h1>Good Morning Name!</h1>
+              <h1>Good Morning!Name</h1>
             </div>
           </div>
         </div>
@@ -214,16 +214,16 @@
           <div class="b_s_h"><h1>Suggestions</h1></div>
           <div class="b_s_items">
             <div class="item">
-              <h4>What strategy works best for most people?</h4>
-              <h3>--</h3>
-            </div>
-            <div class="item">
-              <h4>What method works best for most people?</h4>
-              <h3>--</h3>
-            </div>
-            <div class="item">
               <h4>What is a good success rate?</h4>
-              <h3>--</h3>
+              <h3>0</h3>
+            </div>
+            <div class="item">
+              <h4>How many hashtags to use?</h4>
+              <h3>0</h3>
+            </div>
+            <div class="item">
+              <h4>What is an ideal audience amount?</h4>
+              <h3>0</h3>
             </div>
           </div>
         </div>
@@ -353,7 +353,7 @@
               </a>
             </li>
             <li>
-              <a href="./hashtags.html">
+              <a href="./hashtags.html" class="active">
                 <div class="icon"><i class="fas fa-hashtag"></i></div>
                 <div class="label">Hashtags</div>
               </a>
@@ -377,7 +377,7 @@
               </a>
             </li>
             <li>
-              <a href="./index.html" class="active">
+              <a href="./index.html">
                 <div class="icon"><i class="fas fa-comments"></i></div>
                 <div class="label">Comments</div>
               </a>
@@ -437,7 +437,7 @@
       </div>
       <div class="welcome_message_container">
         <div class="w_m_inner">
-          <h1>Good Morning Name!</h1>
+          <h1>Good Morning!Name</h1>
         </div>
       </div>
     </section>
@@ -455,209 +455,104 @@
         <div class="wave wave3"></div>
         <div class="wave wave4"></div>
       </div>
-      <!-- Comments Start -->
-      <div class="comments">
-        <div class="comment_container">
-          <div class="comment_box">
-            <div class="comment_box_header">
-              <div class="c_b_h">
-                <h1>Comments</h1>
-              </div>
-              <!-- <div class="c_b_a_btns">
-                <button class="active">Scripted</button>
-                <button>Unscripted</button>
-              </div> -->
-              <div class="c_b_btns">
-                <a href="#">Special Instructions</a>
-                <a href="#">Default</a>
-                <a href="#" id="saveToTableComment">Save</a>
+      <!-- Hashtags Start -->
+      <div class="hashtags">
+        <!-- Hashtags Form Start -->
+        <div class="form_container">
+          <div class="form_inner">
+            <div class="form">
+              <form action="#" class="addHashDataInView">
+                <div class="input">
+                  <label for="addNew">Add New Hashtag #</label>
+                  <input type="text" placeholder="Type" id="addNew" />
+                </div>
+                <div class="input">
+                  <div class="info">
+                    <img src="./assets/images/qm.png" />
+                    <div class="info_tooltip">
+                      <p>
+                        The number of posts that used this hashtag in the past.
+                        Can be found on Instagram when a hashtag is being
+                        searched.
+                      </p>
+                    </div>
+                  </div>
+                  <label for="audiance">Audiance</label>
+                  <input
+                    type="text"
+                    placeholder="Type"
+                    id="audiance"
+                    onkeypress="validate(event)"
+                  />
+                </div>
+                <div class="button">
+                  <button>Add</button>
+                </div>
+              </form>
+              <div class="hashtag_info">
+                <p>Total Audience: <span id="totalAudience">0.00M</span></p>
+                <button id="copyHashTags">Copy hashtags</button>
               </div>
             </div>
-            <div class="edit">
-              <h3>Comments: 30/day</h3>
-              <a href="#">Edit</a>
-              <div class="strategy_name">
-                <h4>Strategy name: <span id="strategyName"></span></h4>
+            <div class="group">
+              <button id="sliderPrev">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <div class="group_list">
+                <p>Group 1</p>
               </div>
-            </div>
-            <div class="symbol_method">
-              <div class="s_m_inner methodsTriggerComment">
-                <div class="symbol">
-                  <p>A</p>
-                </div>
-                <div class="method">
-                  <p>Comment on niche related hashtags</p>
-                </div>
-                <div class="icon">
-                  <i class="fas fa-chevron-down"></i>
-                </div>
-              </div>
-              <div class="s_m_list methodsContainerComment">
-                <div class="list_item">
-                  <h3>A</h3>
-                  <p>Comment on niche related hashtags</p>
-                </div>
-                <div class="list_item">
-                  <h3>B</h3>
-                  <p>Comment on images before following a person</p>
-                </div>
-                <div class="list_item">
-                  <h3>C</h3>
-                  <p>Others</p>
-                </div>
-              </div>
-            </div>
-            <div class="s_m_other_textarea">
-              <textarea
-                name="other_textarea_comments"
-                id="other_textarea_comments"
-                placeholder="Please tell us ...."
-              ></textarea>
-            </div>
-            <div class="comments_list_container">
-              <div class="comments_list">
-                <div class="c_l_header">
-                  <h3 id="commentHeadline">Compliment</h3>
-                  <div class="a_btns">
-                    <button class="comments_drag_trigger">
-                      <i class="fas fa-arrows-alt"></i>
-                    </button>
-                    <button class="comments_edit_trigger">
-                      <i class="far fa-edit"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="c_l_inputs">
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>Great image!</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                </div>
-                <div class="c_l_add_input">
-                  <button class="add_inputs_comments">
-                    <i class="fas fa-plus"></i> Add
-                  </button>
-                </div>
-              </div>
-              <div class="comments_list">
-                <div class="c_l_header">
-                  <h3 id="commentHeadline">Describe</h3>
-                  <div class="a_btns">
-                    <button class="comments_drag_trigger">
-                      <i class="fas fa-arrows-alt"></i>
-                    </button>
-                    <button class="comments_edit_trigger">
-                      <i class="far fa-edit"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="c_l_inputs">
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>I really like your style.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>I love your watch.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>The quality is really good.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                </div>
-                <div class="c_l_add_input">
-                  <button class="add_inputs_comments">
-                    <i class="fas fa-plus"></i> Add
-                  </button>
-                </div>
-              </div>
-              <div class="comments_list">
-                <div class="c_l_header">
-                  <h3 id="commentHeadline">Pitch</h3>
-                  <div class="a_btns">
-                    <button class="comments_drag_trigger">
-                      <i class="fas fa-arrows-alt"></i>
-                    </button>
-                    <button class="comments_edit_trigger">
-                      <i class="far fa-edit"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="c_l_inputs">
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>Go to my profile to find more about me.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>Check out my profile to get new ideas.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>Check out my profile to get new docs.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                </div>
-                <div class="c_l_add_input">
-                  <button class="add_inputs_comments">
-                    <i class="fas fa-plus"></i> Add
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="generate_comment_container">
-              <div class="g_c_btn">
-                <button class="generate_comment">Generate Comment</button>
-              </div>
-              <div class="g_c_comment">
-                <h3 class="generated_comment"></h3>
-              </div>
-              <div class="g_c_copy">
-                <button class="generated_comment_copy">
-                  <i class="fas fa-copy"></i>
-                </button>
-              </div>
+              <button id="sliderNext">
+                <i class="fas fa-chevron-right"></i>
+              </button>
             </div>
           </div>
         </div>
-        <!-- Posts Change Log Table -->
+        <!-- Hashtags Form End -->
+        <!-- Hashtags Group Start -->
+        <div class="hashtag_groups_container">
+          <div class="hashtag_group"></div>
+        </div>
+        <!-- Hashtags Group End -->
+        <!-- Hashtags Use Group Button -->
+        <div class="use_grp_btn">
+          <button class="addToTableBtn">
+            Click here to use <span id="addToTableBtnGroup">Group 1</span>
+          </button>
+        </div>
+        <!-- Hashtags Use Group Button -->
+        <!-- Hashtags Change Log Table -->
         <div class="change_log_table_container">
+          <div class="successrate_tooltipcontainer">
+            <div class="info_tooltip" id="stooltip">
+              <p>
+                Here you can see how well your group of hashtags perform. The
+                Success Rate is calculated by the average followers gained on a
+                daily basis.
+              </p>
+            </div>
+          </div>
           <div class="change_log_table_inner">
             <div class="change_log_title"><p>Change log</p></div>
             <div class="change_log_table">
-              <table class="commentsGroupTable">
+              <table class="hashtagsGroupTable">
                 <thead>
                   <tr>
-                    <th>Modified by</th>
-                    <th>Date</th>
-                    <th>Comments Method Symbol</th>
-                    <th>Strategy Name</th>
+                    <th>Hashtag Group</th>
+                    <th>Saved on</th>
+                    <th>Saved by</th>
+                    <th>Total Audience</th>
                     <th>
-                      <div class="infoContainer">
-                        <div class="info">
-                          <img src="./assets/images/qm.png" />
-                        </div>
-                        <p>Number of comments</p>
-                      </div>
-                    </th>
-                    <th>
-                      <div class="info">
+                      <div class="info" id="stooltiptrigger">
                         <img src="./assets/images/qm.png" />
                       </div>
-                      <p class="success">Success Rate</p>
+                      <p class="success" data-order="desc" data-col="audience">
+                        Success Rate
+                      </p>
+
+                      <div class="sortArrays">
+                        <i class="fas fa-sort-up"></i>
+                        <i class="fas fa-sort-down"></i>
+                      </div>
                     </th>
                   </tr>
                 </thead>
@@ -666,9 +561,9 @@
             </div>
           </div>
         </div>
-        <!-- Posts Change Log Table -->
+        <!-- Hashtags Change Log Table -->
       </div>
-      <!-- Posts End -->
+      <!-- Hashtags End -->
     </section>
     <!------------------------------>
     <!-- Content of body part end -->
@@ -691,8 +586,7 @@
     <!--------------------->
     <!-- Footer part end -->
     <!--------------------->
-    <script src="./js/utilities/symbolMethod.js"></script>
-    <script src="./js/comments.js"></script>
+    <script src="./js/hashtag.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

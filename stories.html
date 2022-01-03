@@ -214,16 +214,12 @@
           <div class="b_s_h"><h1>Suggestions</h1></div>
           <div class="b_s_items">
             <div class="item">
-              <h4>What strategy works best for most people?</h4>
-              <h3>--</h3>
-            </div>
-            <div class="item">
               <h4>What method works best for most people?</h4>
               <h3>--</h3>
             </div>
             <div class="item">
               <h4>What is a good success rate?</h4>
-              <h3>--</h3>
+              <h3>0</h3>
             </div>
           </div>
         </div>
@@ -371,13 +367,13 @@
               </a>
             </li>
             <li>
-              <a href="./stories.html">
+              <a href="./stories.html" class="active">
                 <div class="icon"><i class="fas fa-industry"></i></div>
                 <div class="label">Stories</div>
               </a>
             </li>
             <li>
-              <a href="./index.html" class="active">
+              <a href="./index.html">
                 <div class="icon"><i class="fas fa-comments"></i></div>
                 <div class="label">Comments</div>
               </a>
@@ -455,180 +451,134 @@
         <div class="wave wave3"></div>
         <div class="wave wave4"></div>
       </div>
-      <!-- Comments Start -->
-      <div class="comments">
-        <div class="comment_container">
-          <div class="comment_box">
-            <div class="comment_box_header">
-              <div class="c_b_h">
-                <h1>Comments</h1>
+      <!-- Posts Start -->
+      <div class="posts">
+        <div class="post_container">
+          <div class="post_box">
+            <div class="post_box_header">
+              <div class="p_b_h">
+                <h1>Stories</h1>
               </div>
-              <!-- <div class="c_b_a_btns">
-                <button class="active">Scripted</button>
-                <button>Unscripted</button>
-              </div> -->
-              <div class="c_b_btns">
+              <div class="p_b_btns">
                 <a href="#">Special Instructions</a>
-                <a href="#">Default</a>
-                <a href="#" id="saveToTableComment">Save</a>
+                <a href="#" id="saveToTable">Save</a>
               </div>
             </div>
             <div class="edit">
-              <h3>Comments: 30/day</h3>
+              <h3>Actions: 1/day</h3>
               <a href="#">Edit</a>
-              <div class="strategy_name">
-                <h4>Strategy name: <span id="strategyName"></span></h4>
-              </div>
             </div>
             <div class="symbol_method">
-              <div class="s_m_inner methodsTriggerComment">
+              <div class="s_m_inner methodsTrigger">
                 <div class="symbol">
                   <p>A</p>
                 </div>
                 <div class="method">
-                  <p>Comment on niche related hashtags</p>
+                  <p>Taking images from Google Images</p>
                 </div>
                 <div class="icon">
                   <i class="fas fa-chevron-down"></i>
                 </div>
               </div>
-              <div class="s_m_list methodsContainerComment">
+              <div class="s_m_list methodsContainer">
                 <div class="list_item">
                   <h3>A</h3>
-                  <p>Comment on niche related hashtags</p>
+                  <p>Taking images from Google Images</p>
                 </div>
                 <div class="list_item">
                   <h3>B</h3>
-                  <p>Comment on images before following a person</p>
+                  <p>Taking Images from a Website</p>
                 </div>
                 <div class="list_item">
                   <h3>C</h3>
-                  <p>Others</p>
+                  <p>Taking images from other Instagram accounts</p>
+                </div>
+                <div class="list_item">
+                  <h3>D</h3>
+                  <p>Graphiclly Designed Imagery</p>
                 </div>
               </div>
             </div>
-            <div class="s_m_other_textarea">
-              <textarea
-                name="other_textarea_comments"
-                id="other_textarea_comments"
-                placeholder="Please tell us ...."
-              ></textarea>
-            </div>
-            <div class="comments_list_container">
-              <div class="comments_list">
-                <div class="c_l_header">
-                  <h3 id="commentHeadline">Compliment</h3>
-                  <div class="a_btns">
-                    <button class="comments_drag_trigger">
-                      <i class="fas fa-arrows-alt"></i>
-                    </button>
-                    <button class="comments_edit_trigger">
-                      <i class="far fa-edit"></i>
-                    </button>
+            <div class="mobile">
+              <div class="arrow slide_left_control arrow_stories">
+                <i class="fas fa-arrow-circle-left"></i>
+              </div>
+              <div class="mobile_inner mobile_inner_stories">
+                <div class="profile">
+                  <div class="image">
+                    <img
+                      src="https://images.unsplash.com/photo-1637921884274-e12c48d7cd0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                    />
+                  </div>
+                  <div class="date_status">
+                    <div class="date">
+                      <h5>Date:</h5>
+                      <p id="sildeDate">9/29/2021</p>
+                    </div>
+                    <div class="status">
+                      <h5>Status:</h5>
+                      <p>Pending</p>
+                    </div>
                   </div>
                 </div>
-                <div class="c_l_inputs">
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>Great image!</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
+                <div class="image_slider image_slider_stories">
+                  <div class="image_slide">
+                    <div class="image_sildes">
+                      <img
+                        src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                      />
+                    </div>
+                    <div class="image_sildes">
+                      <img
+                        src="https://images.unsplash.com/photo-1637909336971-7ddbcfda6111?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                      />
+                    </div>
+                    <div class="image_sildes">
+                      <img
+                        src="https://images.unsplash.com/photo-1638009665711-dfacc28c88c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                      />
+                    </div>
+                  </div>
+                  <div class="image_slider_dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
                   </div>
                 </div>
-                <div class="c_l_add_input">
-                  <button class="add_inputs_comments">
-                    <i class="fas fa-plus"></i> Add
-                  </button>
+                <div class="image_upload_remove">
+                  <label class="edit_content">
+                    <div class="icon">
+                      <i class="fas fa-download"></i>
+                    </div>
+                    <div class="text">
+                      <p>Download</p>
+                    </div>
+                  </label>
+                  <input
+                    type="file"
+                    id="file_upload_for_image"
+                    accept="image/png, image/jpeg, image/jpg"
+                  />
+                  <label for="file_upload_for_image">
+                    <div class="icon">
+                      <i class="fas fa-upload"></i>
+                    </div>
+                    <div class="text">
+                      <p>Upload</p>
+                    </div>
+                  </label>
+                  <label class="remove">
+                    <div class="icon">
+                      <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <div class="text">
+                      <p>Remove</p>
+                    </div>
+                  </label>
                 </div>
               </div>
-              <div class="comments_list">
-                <div class="c_l_header">
-                  <h3 id="commentHeadline">Describe</h3>
-                  <div class="a_btns">
-                    <button class="comments_drag_trigger">
-                      <i class="fas fa-arrows-alt"></i>
-                    </button>
-                    <button class="comments_edit_trigger">
-                      <i class="far fa-edit"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="c_l_inputs">
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>I really like your style.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>I love your watch.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>The quality is really good.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                </div>
-                <div class="c_l_add_input">
-                  <button class="add_inputs_comments">
-                    <i class="fas fa-plus"></i> Add
-                  </button>
-                </div>
-              </div>
-              <div class="comments_list">
-                <div class="c_l_header">
-                  <h3 id="commentHeadline">Pitch</h3>
-                  <div class="a_btns">
-                    <button class="comments_drag_trigger">
-                      <i class="fas fa-arrows-alt"></i>
-                    </button>
-                    <button class="comments_edit_trigger">
-                      <i class="far fa-edit"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="c_l_inputs">
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>Go to my profile to find more about me.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>Check out my profile to get new ideas.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                  <div class="c_l_input" id="commentsLine">
-                    <h3>Check out my profile to get new docs.</h3>
-                    <span id="delete_comment"
-                      ><i class="fas fa-times"></i
-                    ></span>
-                  </div>
-                </div>
-                <div class="c_l_add_input">
-                  <button class="add_inputs_comments">
-                    <i class="fas fa-plus"></i> Add
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="generate_comment_container">
-              <div class="g_c_btn">
-                <button class="generate_comment">Generate Comment</button>
-              </div>
-              <div class="g_c_comment">
-                <h3 class="generated_comment"></h3>
-              </div>
-              <div class="g_c_copy">
-                <button class="generated_comment_copy">
-                  <i class="fas fa-copy"></i>
-                </button>
+              <div class="arrow slide_right_control arrow_stories">
+                <i class="fas fa-arrow-circle-right"></i>
               </div>
             </div>
           </div>
@@ -638,19 +588,18 @@
           <div class="change_log_table_inner">
             <div class="change_log_title"><p>Change log</p></div>
             <div class="change_log_table">
-              <table class="commentsGroupTable">
+              <table class="postsGroupTable">
                 <thead>
                   <tr>
                     <th>Modified by</th>
+                    <th>Posting Method Symbol</th>
                     <th>Date</th>
-                    <th>Comments Method Symbol</th>
-                    <th>Strategy Name</th>
                     <th>
                       <div class="infoContainer">
                         <div class="info">
                           <img src="./assets/images/qm.png" />
                         </div>
-                        <p>Number of comments</p>
+                        <p>Number of posts</p>
                       </div>
                     </th>
                     <th>
@@ -691,8 +640,7 @@
     <!--------------------->
     <!-- Footer part end -->
     <!--------------------->
-    <script src="./js/utilities/symbolMethod.js"></script>
-    <script src="./js/comments.js"></script>
+    <script src="./js/posts.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

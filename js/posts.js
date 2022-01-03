@@ -163,6 +163,10 @@ saveBtn.addEventListener("click", (e) => {
   displayTableData(postsTableData);
 });
 
-document.querySelector(".remove").addEventListener("click", () => {
-  slides[curSlide].children[0].src = "./assets/images/t.png";
-});
+const removeBtnInMobile = document.querySelector(".remove");
+
+if (removeBtnInMobile) {
+  removeBtnInMobile.addEventListener("click", () => {
+    slides[curSlide].children[0].src = "./assets/images/t.png";
+  });
+}
